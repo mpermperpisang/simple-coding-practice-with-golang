@@ -25,9 +25,9 @@ func EvenNumbers(numbers []int) []string {
 
 	var even []string
 
-	for index := 0; index < len(numbers); index++ {
-		if numbers[index]%2 == 0 {
-			even = append(even, fmt.Sprintf("%v", numbers[index]))
+	for _, index := range numbers {
+		if index%2 == 0 {
+			even = append(even, fmt.Sprintf("%v", index))
 		}
 	}
 
