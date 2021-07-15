@@ -30,6 +30,7 @@ func Modus(numbers []int) int {
 	// modus = 20
 
 	var modusNumber [][]int
+
 	number, highest, modus := 1, 0, 0
 	modusNumber = append(modusNumber, []int{numbers[0], number})
 
