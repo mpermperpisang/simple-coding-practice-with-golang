@@ -9,8 +9,8 @@ import (
 func Employees() {
 	// [["employee ABC", 0, 3], ["employee DEF", 1, 5], ["employee GHI", 1, 1], ["employee JKL", 0, 10]]
 	// output:
-	// men employee = employee ABC (3 years of employment), employee JKL (10 years of employment)
-	// women employee = employee DEF (5 years of employment), employee GHI (1 years of employment)
+	// men employees = employee ABC (3 years of employment), employee JKL (10 years of employment)
+	// women employees = employee DEF (5 years of employment), employee GHI (1 years of employment)
 
 	var (
 		women, men           [][]interface{}
@@ -40,12 +40,12 @@ func Employees() {
 		datasWomen = append(datasWomen, employment(index[0], index[1]))
 	}
 
-	fmt.Println("men employee = " + strings.Join(datasMen, ", "))
-	fmt.Println("women employee = " + strings.Join(datasWomen, ", "))
+	fmt.Println("men employees = " + strings.Join(datasMen, ", "))
+	fmt.Println("women employees = " + strings.Join(datasWomen, ", "))
 }
 
 func employment(name, year interface{}) string {
-	workingYears := fmt.Sprintf("%v", name) + " (" + fmt.Sprintf("%v", year) + " years of employment)"
+	workingYears := fmt.Sprintf("%v (%v years of employment)", name, year)
 
 	return workingYears
 }

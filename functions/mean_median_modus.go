@@ -30,17 +30,14 @@ func Modus(numbers []int) int {
 	// modus = 20
 
 	var modusNumber [][]int
-	number, highest, modus := 0, 0, 0
+	number, highest, modus := 1, 0, 0
+	modusNumber = append(modusNumber, []int{numbers[0], number})
 
 	for index := 0; index < len(numbers)-1; index++ {
-		if numbers[index+1] == numbers[index] {
+		if numbers[index] == numbers[index+1] {
 			number += 1
 		} else {
 			number = 1
-		}
-
-		if index == 0 {
-			modusNumber = append(modusNumber, []int{numbers[0], number})
 		}
 
 		if numbers[index] != numbers[index+1] {
