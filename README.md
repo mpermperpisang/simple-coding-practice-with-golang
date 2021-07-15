@@ -1,7 +1,7 @@
-# simple-coding-practice-with-golang
+# Simple coding practice with Go
 
 ### Preparation
-Install Go - https://golang.org/dl/
+Install Go - https://golang.org/dl/</br>
 Setup profile
 ```
 export GOROOT=/usr/local/go
