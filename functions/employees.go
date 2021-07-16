@@ -3,6 +3,7 @@ package functions
 import (
 	"fmt"
 	"log"
+	"strings"
 )
 
 func Employees() {
@@ -28,8 +29,8 @@ func Employees() {
 		}
 	}
 
-	fmt.Println("men employees = " + JoinArray(men))
-	fmt.Println("women employees = " + JoinArray(women))
+	fmt.Println("men employees = " + strings.Join(men, ", "))
+	fmt.Println("women employees = " + strings.Join(women, ", "))
 }
 
 func employment(name, year interface{}) string {
